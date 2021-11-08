@@ -1,9 +1,15 @@
 fileFormatVersion: 2
-guid: 6b1d4014720ab0346a67dad9af8b9a6b
+guid: 1b5147b10372e2f43affb29b9cbe2415
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Babey
+    second: {fileID: -5271389520031169770, guid: 1b5147b10372e2f43affb29b9cbe2415,
+      type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
