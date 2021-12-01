@@ -1,7 +1,7 @@
 /***
  * Created by: Rain Baldridge
  * Date: 11/29/21
- * Modified: 11/29/21
+ * Modified: 12/1/21
  * Description: Text box speak for baby head. 
 ***/
 
@@ -22,12 +22,21 @@ public class BabySpeech : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        textPanel = GetComponentInChildren<Text>();
+    } // end Start()
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
+        if(spokenStrings < speech.Length)
+        {
+            Speak(speech[spokenStrings]);
+            spokenStrings++;
+        }
+    } // end OnTriggerEnter()
+
+    void Speak(string sayThings)
+    {
+        textPanel.text = sayThings;
+        textPanel.gameObject.SetActive(true);
+    } // end Speak()
 }
