@@ -34,11 +34,12 @@ public class Key : MonoBehaviour
         {
             Destroy(gameObject); // destroys key
         }
+        Debug.Log("Triggered.");
     } // end OnTriggerEnter()
 
     void OnDestroy()
     {
-        Key.keyCount--;
+        --Key.keyCount;
         
         if(Key.keyCount <= 0)
         {
