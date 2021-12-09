@@ -30,18 +30,19 @@ public class Key : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Triggered.");
         if (other.CompareTag("Player"))
         {
             Destroy(gameObject); // destroys key
         }
-        Debug.Log("Triggered.");
+        
     } // end OnTriggerEnter()
 
     void OnDestroy()
     {
-        --Key.keyCount;
+        ++Key.keyCount;
         
-        if(Key.keyCount <= 0)
+        if(Key.keyCount > 0)
         {
             Debug.Log("Keys Found.");
         }
