@@ -27,10 +27,14 @@ public class BabySpeech : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(spokenStrings < speech.Length)
+
+        if (other.CompareTag("Player"))
         {
-            Speak(speech[spokenStrings]);
-            spokenStrings++;
+            if (spokenStrings < speech.Length)
+            {
+                Speak(speech[spokenStrings]);
+                spokenStrings++;
+            }
         }
     } // end OnTriggerEnter()
 

@@ -1,7 +1,7 @@
 /*** 
  *  Created by: Rain Baldridge
  *  Date Created: 12/01/21
- *  Modified: 12/01/21
+ *  Modified: 12/10/21
  *  Description: Behavior for key pickups.
  ***/
 
@@ -18,15 +18,8 @@ public class Key : MonoBehaviour
     void Start()
     {
         Debug.Log("Find the keys to escape.");
-        Key.keyCount++; // increment keyCount
         Debug.Log("Keys Found: " + keyCount);
     } // end Start()
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    } // end Update()
 
     void OnTriggerEnter(Collider other)
     {
