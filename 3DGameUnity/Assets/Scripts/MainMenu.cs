@@ -1,8 +1,9 @@
 /***
- *  Created By: Rain Baldridge 
- *  Date Created: 12/07/21
- *  Date Modified: 12/08/21
- *  Description: Functionality for Main Menu
+ *  Created by: Rain Baldridge
+ *  Date Created: 12/10/21
+ *  Date Modified: 12/10/21
+ *  Description: Allows main menu functionality.
+ * 
 ***/
 
 using System.Collections;
@@ -12,13 +13,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void Play()
+    public void PlayGame()
     {
-        SceneManager.LoadScene("Greybox");
-    } // end Play()
+        SceneManager.LoadScene(1);
+    }
 
-    public void Quit()
+    public void QuitGame()
     {
         Application.Quit();
-    } // end Quit()
+    }
 }
